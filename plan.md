@@ -15,9 +15,13 @@ Memory:
 Memorys:
 - memories:Memory
 
-people:
+People
+- gender
 - name
-- memorys:Memorys
+- know_time
+- description:str
+- current_state:int
+
 
 ## Memory Generating
 
@@ -28,22 +32,28 @@ parameter:
 - context
 - role
 
-### Initial_memory_generator:
+### PeopleGenerator
 
-- generate the memory that the before the bot meet you.
-- role: self,friends
+1. generate basic people info
+
+2. generate the related memorys(period generator):
+   - beginning
+   - process
+
+### InitialMemoryGenerator:
+
+generate the memory that the before the bot meet you.
 
 BasicInfoGenerator
+- gender
 - name
 - birth
 - location
 - background
 
-Generate people you know:
-- name
-- know_age
+generate people you know
 
-Fill the others with period generator
+generate the memorys
 
 ### Daylife_memory_generator
 
@@ -52,6 +62,7 @@ generate an experience about day life.
 parameter:
 - period
 - time(in a day)
+- role
 
 
 
