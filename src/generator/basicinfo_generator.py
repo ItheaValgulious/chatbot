@@ -16,8 +16,22 @@ in Chinese.
 
 class BasicInfoGenerator:
     @classmethod
+    def generate_birth(cls,info):
+        return Date(random.randint(2004,2009),random.randint(1,12),random.randint(1,28))
+    @classmethod
+    def generate_gender(cls,info):
+        return random.choice(['male','female'])
+    @classmethod
+    def generate_name(cls,info):
+        pass
+    @classmethod
+    def generate_location(cls,info):
+        pass
+    @classmethod
+    def generate_background(cls,info):
+        pass
+    @classmethod
     def generate(cls,name="",gender="",birth="",location="",background=""):
-        birth=birth or Date(random.randint(2004,2009),random.randint(1,12),random.randint(1,28))
 
         info={
             "name":name,
